@@ -281,6 +281,13 @@ uint8_t LCDWIKI_TOUCH::TP_Scan(uint8_t mode) {
     }
   }
 
+  if (touch_statue & TP_PRES_DOWN) {
+    // invalid coordinate
+    if (x >= width || y >= height) {
+      touch_statue = 0;
+    }
+  }
+
   return touch_statue & TP_PRES_DOWN;
 }
 
