@@ -48,13 +48,12 @@ LCDWIKI_TOUCH::LCDWIKI_TOUCH(int8_t tcs, int8_t tclk, int8_t tdout, int8_t tdin,
   y = 0xffff;
 }
 
-void LCDWIKI_TOUCH::TP_Init(uint8_t r, uint16_t w, uint16_t h) {
+void LCDWIKI_TOUCH::TP_Init(uint16_t w, uint16_t h) {
   TDIN_HIGH;
   TCLK_HIGH;
   TCS_HIGH;
   width = w;
   height = h;
-  LCD_Set_Rotation(r);
 }
 
 void LCDWIKI_TOUCH::TP_Write_Byte(uint8_t data) {

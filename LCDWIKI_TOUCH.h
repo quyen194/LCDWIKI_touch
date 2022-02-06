@@ -23,7 +23,7 @@ class LCDWIKI_TOUCH {
  public:
   LCDWIKI_TOUCH(int8_t tcs, int8_t tclk, int8_t tout, int8_t tdin,
                 int8_t tirq);  // sofware spi
-  void TP_Init(uint8_t r, uint16_t w, uint16_t h);
+  void TP_Init(uint16_t w, uint16_t h);
   uint8_t TP_Scan(uint8_t mode);
   void TP_Write_Byte(uint8_t data);
   uint16_t TP_Read_ADC(uint8_t cmd);
